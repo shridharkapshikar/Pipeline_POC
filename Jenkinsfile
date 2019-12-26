@@ -1,4 +1,4 @@
-node('any') {
+node {
     environment {
         value = 'World'
     }
