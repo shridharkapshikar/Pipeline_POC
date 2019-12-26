@@ -7,6 +7,6 @@ node {
     }
     stage('Build') {
         //sh 'printenv'
-        sh 'echo "${env.BUILD.ID}"
+        sh 'echo "${env.BUILD.ID}"'
     }
 }
