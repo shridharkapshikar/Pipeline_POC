@@ -8,6 +8,6 @@ node {
     stage('Build') {
         //sh 'printenv'
         sh 'echo ${env.BRANCH_NAME}'
-        sh echo '${env.BRANCH_ID}'
+        sh 'echo ${env.BRANCH_ID}'
     }
 }
