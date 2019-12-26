@@ -4,7 +4,7 @@ node {
     }
 	
    stage("Git checkout"){
-	   checkout scm
+	   git credentialsId: 'gitid', url: 'https://github.com/shridharkapshikar/Pipeline_POC.git'
     }
     stage("Test") {
         sh 'echo Hello, ${value}'
