@@ -1,4 +1,4 @@
-node('my-label') {
+node('any') {
     environment {
         value = 'World'
     }
