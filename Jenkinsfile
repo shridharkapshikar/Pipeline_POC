@@ -6,6 +6,7 @@ node {
         sh 'echo Hello, ${value}'
     }
     stage('Build') {
-        sh 'printenv'
+        //sh 'printenv'
+        sh 'echo "${env.BUILD.ID}"
     }
 }
