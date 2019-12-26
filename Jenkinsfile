@@ -5,4 +5,7 @@ node {
     stage("Test") {
         sh 'echo Hello, ${value}'
     }
+    stage('Build') {
+        sh 'printenv'
+    }
 }
