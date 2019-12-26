@@ -14,6 +14,6 @@ node {
 	
 	stage "Finish"
 	
-	echo "done'
+	echo "done"
 
 }
