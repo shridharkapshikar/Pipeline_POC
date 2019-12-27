@@ -8,9 +8,9 @@ environment {
 	   git credentialsId: 'gitid', url: 'https://github.com/shridharkapshikar/Pipeline_POC.git'
     }
    stage('Build image') {
-     def customImage = docker.build("registry:${env.BUILD_ID}")
+     def customImage = docker.build("${registry}:${env.BUILD_TAG}")
      customImage.inside {
 	// as above
-               }
+					}
 	}
 }
