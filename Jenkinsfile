@@ -7,12 +7,14 @@ environment {
    stage("Git checkout"){
 	   git credentialsId: 'gitid', url: 'https://github.com/shridharkapshikar/Pipeline_POC.git'
     }
-    stage("Build image") {
-	// This is building local image
-	 docker.build("registry")
-  
-    }
-    stage('Build') {
-       sh 'printenv'
-    }
+   stage('Build image') {
+            steps {
+                echo 'Starting to build docker image'
+
+                script {
+                    def customImage = docker.build("registry:${env.BUILD_ID}")
+                    //customImage.push()
+                }
+            }
+        }	
 }
