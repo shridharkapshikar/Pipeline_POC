@@ -1,7 +1,7 @@
 node {
 environment {
-    registry = "shridharkapshikar / mycentos"
-    registryCredential = ‘github credentails’
+    registry = "shridharkapshikar/mycentos"
+    registryCredential = 'github credentails'
 }
     
    stage("Git checkout"){
@@ -9,7 +9,7 @@ environment {
     }
     stage("Build image") {
 	// This is building local image
-	 docker.build registry + ":$BUILD_NUMBER"
+	 docker.build("registry")
   
     }
     stage('Build') {
