@@ -12,7 +12,7 @@ node {
 	
 	stage "print docker version"
 	// print docker version
-	sh "git -v"
+	sh "docker -v"
 	
 	stage "Archive build output"
 	
